@@ -1,0 +1,62 @@
+Resource (Data):
+
+*User*
+{
+    "username": "test name"
+}
+
+*Item*
+{
+    "name": "Item",
+    "description": "Item Description",
+    "location": ObjectId("123"), => Location
+    "owner": ObjectId("123"), => User
+    "categories" : [ObjectId("123"), ObjectId("456")],
+    "quantity": 10,
+    "price": 3
+}
+
+*categories
+{
+    "name": "Category Name"
+}
+
+*location*
+{
+    "name": "Location Name",
+    "description": "Location Description"
+}
+
+Routes:
+*Item*
+{
+  "GET /items": {
+    "desc": "returns all items",
+    "response": "200 application/json",
+    "data": [{}, {}, {}]
+  },
+
+  "GET /items/:id": {
+    "desc": "returns one item represented by its id",
+    "response": "200 application/json",
+    "data": {}
+  },
+
+  "POST /items": {
+    "desc": "create and returns a new item using the posted object as the item",
+    "response": "201 application/json",
+    "data": {}
+  },
+
+  "PUT /items/:id": {
+    "desc": "updates and returns the matching item with the posted update object",
+    "response": "200 application/json",
+    "data": {}
+  },
+
+  "DELETE /items/:id": {
+    "desc": "deletes and returns the matching item",
+    "response": "200 application/json",
+    "data": {}
+  }
+}
