@@ -1,13 +1,13 @@
 {
   "name": "inventory-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend of a home inventory management system",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "mocha src/spec.js"
+    "start": "gulp serve",
+    "test": "mocha test/spec.js"
   },
-  "author": "",
+  "author": "Grace Huo",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^0.8.3",
@@ -24,6 +24,12 @@
   },
   "devDependencies": {
     "chai": "^3.2.0",
-    "supertest": "^1.0.1"
+    "supertest": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-nodemon": "^2.2.1",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1"
   }
 }

@@ -2,6 +2,7 @@ var User = require('../api/user/userModel');
 var Category = require('../api/category/categoryModel');
 var Location = require('../api/location/locationModel');
 var Item = require('../api/item/itemModel');
+var config = require('../config/config');
 
 var _ = require('lodash');
 var logger = require('./logger');

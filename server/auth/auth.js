@@ -15,6 +15,7 @@ exports.decodeToken = function() {
 
     // this will call next if token is valid and send error if its not.
     // It will attached the decoded token to req.user
+    console.log( 'req', req.headers );
     checkToken(req, res, next);
   };
 };
@@ -55,6 +56,7 @@ exports.verifyUser = function() {
     // look user up in the DB so we can check if the passwords match for the username
     User.findOne({username: username})
       .then(function(user) {
+        console.log( 'user', user );
         if (!user) {
           res.status(401).send('No user with the given username');
         }

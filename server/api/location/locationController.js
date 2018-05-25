@@ -54,6 +54,7 @@ exports.post = function(req, res, next) {
     .then(function(location) {
       res.json(location);
     }, function(err) {
+      console.log("!!!!", err);
       next(err);
     });
 };
