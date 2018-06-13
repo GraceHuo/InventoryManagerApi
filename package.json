@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",
-    "test": "mocha test/spec.js",
-    "postinstall": "npm run build"
+    "test": "mocha test/spec.js"
   },
   "author": "Grace Huo",
   "license": "ISC",
