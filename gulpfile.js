@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var nodemon = require('gulp-nodemon');
+var config = require('./server/config/config');
 
 var jsFiles = ['*.js', 'src/**/*.js'];
 
@@ -21,7 +22,7 @@ gulp.task('serve', ['style'], function () {
     script: 'index.js',
     delayTime: 1,
     env: {
-      'PORT': 3000
+      'PORT': config.port
     },
     watch: jsFiles
   };
