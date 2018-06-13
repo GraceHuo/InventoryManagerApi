@@ -7,7 +7,7 @@ var config = {
   port: process.env.PORT || 3000,
   expireTime: 24 * 60 * 10, // 10 days
   secrets: {
-    jwt: process.env.JWT || 'inventorySecrets' // this is not a good practice
+    jwt: process.env.JWT || 'inventorySecrets'
   }
 };
 
