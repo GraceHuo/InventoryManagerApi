@@ -1,2 +1,3 @@
 # InventoryManagerApi
-other readme
+The api for Inventory Manager app
+
